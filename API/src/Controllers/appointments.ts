@@ -1,5 +1,5 @@
 import { Response, Request } from 'express'
-import Connection from '../helpers/database'
+import Connection from '../Helpers/database'
 
 const db = new Connection();
 
