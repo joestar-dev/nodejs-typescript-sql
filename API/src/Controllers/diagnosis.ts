@@ -1,5 +1,5 @@
 import { Response, Request, RequestHandler } from 'express'
-import Connection from '../Helpers/database'
+import Connection from '../helpers/database'
 
 const db = new Connection()
 export const createDiagnosis = async (req: Request, res: Response) => { 
@@ -55,7 +55,7 @@ export const getDiagnosisForUser = async (req: Request, res: Response) => {
 
   try {
 
-    const diagnosis = await db.exec("getDiagnosisForUser", { email }).recordset;
+    const diagnosis = (await db.exec("getDiagnosisForUser", { email })).recordset;
 
     res.status(200).json(diagnosis)
   } catch (error) {

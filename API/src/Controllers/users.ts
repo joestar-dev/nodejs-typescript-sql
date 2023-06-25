@@ -1,8 +1,8 @@
 import { Response, Request, RequestHandler } from 'express'
-import { loginSchema, registerSchema } from '../Helpers/user-validation';
+import { loginSchema, registerSchema } from '../helpers/user-validation';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import Connection from '../Helpers/database';
+import Connection from '../helpers/database';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -70,7 +70,7 @@ export const signIn = async (req: Request, res: Response) => {
 
 export const getUsers = async (req: Request, res: Response) => { 
   try {
-    const users = await db.exec('getAllusers').recordset;
+    const users = (await db.exec('getAllusers')).recordset;
 
     res.status(200).json(users);
     
