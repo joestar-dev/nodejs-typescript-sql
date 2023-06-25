@@ -1,8 +1,8 @@
 import { Response, Request, RequestHandler } from 'express'
-import { loginSchema, registerSchema } from '../helpers/user-validation';
+import { loginSchema, registerSchema } from '../Helpers/user-validation';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import Connection from '../helpers/database';
+import Connection from '../Helpers/database';
 import dotenv from 'dotenv';
 
 dotenv.config();
