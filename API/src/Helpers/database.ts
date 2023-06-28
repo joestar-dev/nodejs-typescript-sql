@@ -9,6 +9,7 @@ export default class Connection {
     const pool = mssql.connect(sqlConfig) as Promise<mssql.ConnectionPool>;
     return pool;
   }
+  
   createRequest(request: mssql.Request, data: { [c: string]: string }) {
     const keys = Object.keys(data);
     keys.map((keyName) => {
