@@ -36,9 +36,9 @@ app.use((0, cors_1.default)());
 app.use((0, express_1.json)());
 const PORT = process.env.PORT;
 app.use('/api/diagnosis', routes_1.diagnosisRoute);
-app.use('api/users', routes_1.userRoute);
-app.use('api/appointments', routes_1.appointmentRoute);
-app.use('api/patients', routes_1.patientRoute);
+app.use('/api/users', routes_1.userRoute);
+app.use('/api/appointments', routes_1.appointmentRoute);
+app.use('/api/patients', routes_1.patientRoute);
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });

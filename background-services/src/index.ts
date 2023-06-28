@@ -1,10 +1,10 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cron from 'node-cron';
-import welcomeEmail from './email service/welcomeEmail';
-import admissionReportEmail from './email service/admissionReport';
-import diagnosisEmail from './email service/diagnosisEmail';
-import appointmentEmail from './email service/appointmentEmail';
+import welcomeEmail from './email-service/welcomeEmail';
+import admissionReportEmail from './email-service/admissionReport';
+import diagnosisEmail from './email-service/diagnosisEmail';
+import appointmentEmail from './email-service/appointmentEmail';
 
 const app = express();
 

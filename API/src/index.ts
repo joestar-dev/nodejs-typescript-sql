@@ -12,9 +12,9 @@ app.use(json());
 const PORT = process.env.PORT;
 
 app.use('/api/diagnosis', diagnosisRoute)
-app.use('api/users', userRoute)
-app.use('api/appointments', appointmentRoute)
-app.use('api/patients', patientRoute)
+app.use('/api/users', userRoute)
+app.use('/api/appointments', appointmentRoute)
+app.use('/api/patients', patientRoute)
 
 app.listen(PORT, () => { 
   console.log(`Server is running on port ${PORT}`)

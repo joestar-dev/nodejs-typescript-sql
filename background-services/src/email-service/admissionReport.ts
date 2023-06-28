@@ -23,6 +23,7 @@ interface Patient {
 }
 
 const admissionReportEmail = async () => { 
+
   const patients: Patient[] = (await db.exec("checkPatient")).recordset;
 
   if (patients.length) { 

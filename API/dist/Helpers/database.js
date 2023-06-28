@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const mssql_1 = __importDefault(require("mssql"));
-const config_1 = require("../config/config");
+const config_1 = require("../Config/config");
 class Connection {
     constructor() {
         this.pool = this.getConnection();
