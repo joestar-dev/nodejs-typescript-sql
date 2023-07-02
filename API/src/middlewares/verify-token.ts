@@ -6,10 +6,14 @@ import { Data } from '../interfaces/data';
 dotenv.config();
 
 interface Extended extends Request { 
-  info?:Data
+  info?: Data;
 }
 
-export const verifyToken = async (req: Extended, res: Response, next: NextFunction) => { 
+export const verifyToken = async (
+  req: Extended,
+  res: Response,
+  next: NextFunction
+) => { 
 
   try {
 
